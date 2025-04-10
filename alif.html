@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Alif ❤️</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe4ec, #ffd1dc);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .welcome {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    .welcome h1 {
+      font-size: 3rem;
+      color: #ff3366;
+      animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #ff3366;
+    }
+
+    .welcome p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      animation: fadeInText 2s ease 3s forwards;
+      opacity: 0;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cake {
+      width: 150px;
+      margin: 30px auto;
+      position: relative;
+      animation: bounce 2s infinite;
+    }
+
+    .cake .base {
+      width: 100%;
+      height: 60px;
+      background: #ff69b4;
+      border-radius: 10px 10px 0 0;
+      position: relative;
+    }
+
+    .cake .top {
+      width: 80%;
+      height: 40px;
+      background: #fff0f5;
+      position: absolute;
+      top: -30px;
+      left: 10%;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .candle {
+      width: 10px;
+      height: 30px;
+      background: #fff;
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 3px;
+    }
+
+    .flame {
+      width: 10px;
+      height: 10px;
+      background: orange;
+      border-radius: 50%;
+      position: absolute;
+      top: -12px;
+      left: 0;
+      animation: flame 0.6s infinite alternate;
+    }
+
+    @keyframes flame {
+      from { transform: scale(1); opacity: 1; }
+      to { transform: scale(1.3); opacity: 0.6; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .letter, .feelings, .love-meter {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff0f5;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      padding: 30px;
+    }
+
+    @media (min-width: 600px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.4s, box-shadow 0.4s;
+      cursor: pointer;
+      transform: scale(1);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05) rotate(2deg);
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .lightbox .close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .meter {
+      width: 80%;
+      max-width: 500px;
+      height: 30px;
+      background: #ffd6e0;
+      margin: 20px auto;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(to right, #ff69b4, #ff1493);
+      color: white;
+      font-weight: bold;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 20px;
+      transition: width 2s ease;
+    }
+
+    audio {
+      display: block;
+      margin: 40px auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .heart {
+      position: fixed;
+      top: -20px;
+      color: red;
+      font-size: 24px;
+      animation: fall 4s linear infinite;
+      z-index: 999;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="welcome">
+    <h1>Happy Birthday Alif ❤️</h1>
+    <p>From your Abir, with endless love 🥰</p>
+    <br>
+    <br>
+    <div class="cake">
+      <div class="top"></div>
+      <div class="base"></div>
+      <div class="candle"><div class="flame"></div></div>
+    </div>
+  </div>
+
+  <div class="letter">
+    <p>
+      প্রিয় আলিফ,<br><br>
+      দূরত্ব যতই থাকুক, আমার ভালোবাসা সবসময় তোমার সঙ্গেই থাকে।
+      তোমার এই বিশেষ দিনে, এই ওয়েবসাইটটা শুধু তোমার জন্য। আমি তোমাকে অনেক ভালোবাসি 🥹
+      <br><br>– তোমার আবির 🌸
+    </p>
+  </div>
+
+  <div class="feelings">
+    <h2>How I Feel About You 💖</h2>
+    <p>
+      তুমি আমার জীবনের সবচেয়ে সুন্দর অনুভূতি।  
+      তোমার হাসি, তোমার কথা – সবকিছুই আমার হৃদয়ের গহীনে জায়গা করে নিয়েছে।  
+      তুমি পাশে থাকো আর না থাকো, আমার ভালোবাসা তোমার জন্য চিরন্তন।  
+    </p>
+  </div>
+
+  <div class="love-meter">
+    <h2>আমার ভালোবাসা তোমার প্রতি 💘</h2>
+    <div class="meter">
+      <div class="fill" id="love-fill">0%</div>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <img src="images/alif1.jpg" />
+    <img src="images/alif2.jpg" />
+    <img src="images/alif3.jpg" />
+    <img src="images/alif4.jpg" />
+    <img src="images/alif5.jpg" />
+    <img src="images/alif6.jpg" />
+    <img src="images/alif7.jpg" />
+    <img src="images/alif8.jpg" />
+    <img src="images/alif9.jpg" />
+    <img src="images/alif10.jpg" />
+    <img src="images/alif11.jpg" />
+    <img src="images/alif12.jpg" />
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" />
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="music/audio.mp3" type="audio/mpeg" />
+    আপনার ব্রাউজার অডিও সাপোর্ট করে না।
+  </audio>
+
+  <footer>
+    &copy; Made with ❤️ by Abir for Alif | Happy Birthday!
+  </footer>
+
+  <script>
+    // Lightbox Logic
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+    }
+
+    // Heart Rain
+    const createHeart = () => {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = Math.random() * 20 + 16 + 'px';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 4000);
+    };
+    setInterval(createHeart, 300);
+
+    // Love Meter
+    let lovePercent = 0;
+    const loveFill = document.getElementById("love-fill");
+
+    const increaseLove = setInterval(() => {
+      if (lovePercent < 100) {
+        lovePercent++;
+        loveFill.style.width = lovePercent + "%";
+        loveFill.textContent = lovePercent + "%";
+      } else {
+        clearInterval(increaseLove);
+      }
+    }, 30);
+  </script>
+</body>
+</html>
